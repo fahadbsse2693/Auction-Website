@@ -1,0 +1,84 @@
+﻿@model ATNB_2._0.Models.BidsOnProduct
+
+@{
+    ATNB_2._0.Models.Product product = ViewData["Product"] as ATNB_2._0.Models.Product;
+    List<ATNB_2._0.Models.BidsOnProduct> bidList = ViewData["Bids"] as List<ATNB_2._0.Models.BidsOnProduct>;
+    ATNB_2._0.Models.AspNetUser productOwner = ViewData["Owner"] as ATNB_2._0.Models.AspNetUser;
+    List<ATNB_2._0.Models.AspNetUser> Users = ViewData["User"] as List<ATNB_2._0.Models.AspNetUser>;
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <table class="table table-bordered table-responsive">
+        <tr>
+            <th>Product Name</th>
+            <th>Product Description</th>
+            <th>Product OfferPrice</th>
+        </tr>
+        <tr>
+            <td>@product.Name</td>
+            <td>@product.Description</td>
+            <td>@product.OfferPrice</td>
+        </tr>
+    </table>
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-10">
+            <img src="~/images/@product.image" width="470" height="400" />
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-10">
+            <label style="color:steelblue;font-size:large">Product Owner Detail</label>
+            <br /><br />
+            <dl class="dl-horizontal">
+                <dt>Owner Name: </dt>
+                <dd>@productOwner.FullName</dd>
+                <dt>Owner Contact #: </dt>
+                <dd>@productOwner.PhoneNumber</dd>
+                <dt>Owner Email: </dt>
+                <dd>@productOwner.Email</dd>
+            </dl>
+        </div>
+    </div>
+
+
+    <div class="col-lg-6 col-sm-6"></div>
+    <div class="col-lg-6 col-sm-6">
+        <div>
+            @if (bidList != null)
+            {
+                foreach (var b in bidList)
+                {
+                    foreach (var u in Users)
+                    {
+                        <label>@if (b.userId == u.Id)
+                        {
+                            <b for ="@b.comment">@u.FullName</b>
+                        }</label>
+
+                    }
+                    <input type="text" value="@b.comment" style="width:70%;height:8vh;border-radius:5px;margin-top:2px" readonly>
+                    <br />
+                }
+            }
+        </div>
+
+        <div>
+            @using (Html.BeginForm("MakeBid", "BidsOnProducts", FormMethod.Post))
+            {
+                <div class="form-group">
+
+                </div>
+                <div class="form-group">
+                    <div class="col-md-12">
+                        @Html.EditorFor(model => model.comment, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.comment, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-md-12">
+                        <input type="submit" value="Make A Bid" class="btn btn-primary" style="margin-top:2px">
+                    </div>
+                </div>
+
+            }
+        </div>
+    </div>
+</div>

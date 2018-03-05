@@ -1,0 +1,29 @@
+﻿@model IEnumerable<ATNB_2._0.Models.Product>
+@{
+    ViewBag.Title = "GetAll";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container-fluid">
+    <p>
+        @Html.ActionLink("Upload other Products", "Create")
+    </p>
+    <h3>Your Upload Products Detail</h3>
+
+    <div class="row">
+        @foreach (var item in Model)
+            {
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-10 thumb" data-cat=@item.Type>
+                <div class="thumbnail">
+                    <img class="img-responsive grow " src="~/images/@item.image" alt="pic">
+                    <p class="caption">@Html.DisplayFor(modelItem => item.Name) <br>
+                     OfferPrice: @Html.DisplayFor(modelItem => item.OfferPrice) <br /> Specification: @Html.DisplayFor(modelItem => item.Description)
+                    
+                     </p>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.productId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.productId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.productId })
+                </div>
+            </div>
+        }
+    </div>
+</div>

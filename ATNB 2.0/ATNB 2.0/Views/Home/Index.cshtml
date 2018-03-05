@@ -1,0 +1,161 @@
+﻿@*@{
+    ViewBag.Title = "Home Page";
+}
+<div class="clear"></div>
+<div class="container-fluid">
+    <div class="wrap">
+        <ul id="filters" class="clearfix">
+            <li><span class="filter active" data-filter="all">all</span></li>
+            <li><span class="filter" data-filter="electronics">electronics</span></li>
+            <li><span class="filter" data-filter="vehicle">vehicle</span></li>
+            <li><span class="filter" data-filter="property">property</span></li>
+            <li><span class="filter" data-filter="home">home Appliances</span></li>
+            <li><span class="filter" data-filter="photo">photography</span></li>
+            <li><span class="filter" data-filter="other">others</span></li>
+        </ul>
+    </div>
+</div>
+
+@*<div class="container-fluid">
+    <div class="row">
+        @foreach (var item in Model)
+            {
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-10 thumb" data-cat=@item.Type>
+                <div class="thumbnail">
+                    <img class="img-responsive grow " src="~/images/@item.image" alt="pic">
+                    <p class="caption">
+                        @item.Name) <br>
+                    OfferPrice: @item.OfferPrice) <br /> Specification: @item.Description)
+                    <br />
+                    <a href="#" target="_blank"><b>Make a Bid</b></a>
+                </p>
+            </div>
+        </div>
+        }
+    </div>
+</div>
+
+
+<div class="container-fluid" style="margin-top:0;">
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-10 thumb" data-cat="electronics">
+            <div class="thumbnail">
+                <img class="img-responsive grow " src="~/images/watch.jpg" alt="pic">
+                <p class="caption">Orignal Rolex, Used branded watch  starting price 10,500</p>
+                <a href="#" target="_blank">Make a Bid</a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-10  thumb" data-cat="vehicle">
+            <div class="thumbnail">
+                <img class="img-responsive grow " src="~/images/bike.jpg" alt="pic">
+                <p class="caption">kawasaki 500cc 50 miledge starting price PKR 230,000</p>
+                <a href="#" target="_blank">Make a Bid</a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-10  thumb" data-cat="vehicle">
+            <div class="thumbnail">
+                <img class="img-responsive grow " src="~/images/bus.jpg" alt="pic">
+                <p class="caption">Baewoo Bus 72 seater , most reliable , all parts are orignal</p>
+                <a href="#" target="_blank">Make a Bid</a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-10  thumb" data-cat="home">
+            <div class="thumbnail">
+                <img class="img-responsive grow " src="~/images/ac.jpg" alt="pic">
+                <p class="caption">Used AirCondition Strating price PKR 15,000 less-expensive </p>
+                <a href="#" target="_blank">Make a Bid</a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-10 thumb" data-cat="vehicle">
+            <div class="thumbnail">
+                <img class="img-responsive grow " src="~/images/Bycle.jpg" alt="pic">
+                <p class="caption">BMX bycle , good condition starting price PKR 5,000 , all parts are orignal</p>
+                <a href="#" target="_blank">Make a Bid</a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-10 thumb" data-cat="vehicle">
+            <div class="thumbnail">
+                <img class="img-responsive grow " src="~/images/car.jpg" alt="pic">
+                <p class="caption">Ferrari 220 mile/hr 30 miledge , petrol CNG enable Strating price PKR 3,150,000</p>
+                <a href="#" target="_blank">Make a Bid</a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-10  thumb" data-cat="electronics">
+            <div class="thumbnail">
+                <img class="img-responsive grow " src="~/images/CPU.jpg" alt="pic">
+                <p class="caption">CPU 8GB RAM 1TeraByte HardDisk 2.5 GHz processor 126 cache </p>
+                <a href="#" target="_blank">Make a Bid</a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-10  thumb" data-cat="electronics">
+            <div class="thumbnail">
+                <img class="img-responsive grow " src="~/images/tab.jpg" alt="pic">
+                <p class="caption">sumsung tab , 2GB RAM 150 GB ROM bettery timing 10hr minimum</p>
+                <a href="#" target="_blank">Make a Bid</a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-10  thumb" data-cat="property">
+            <div class="thumbnail">
+                <img class="img-responsive grow " src="~/images/property.jpg" alt="pic">
+                <p class="caption">build home at DHA karachi at seaview  phase minimum price 2 millions PKR </p>
+                <a href="#" target="_blank">Make a Bid</a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-10  thumb " data-cat="home">
+            <div class="thumbnail">
+                <img class="img-responsive grow " src="~/images/furniture.jpg" alt="pic">
+                <p class="caption">used furniture for home or offices , get this at reasonable price </p>
+                <a href="#" target="_blank">Make a Bid</a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-10  thumb" data-cat="electronics">
+            <div class="thumbnail">
+                <img class="img-responsive grow " src="~/images/mobile.JPG" alt="pic">
+                <p class="caption">Used iPhone 5s 32GB price 15000 PKR good condition ,with all acessories </p>
+                <a href="#" target="_blank">Make a Bid</a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-10  thumb" data-cat="electronics">
+            <div class="thumbnail">
+                <img class="img-responsive grow " src="~/images/laptop.jpg" alt="pic">
+                <p class="caption">HP laptop 4GB RAM 500GB HD corei5 all acessories available bettery time uptil 4hr</p>
+                <a href="#" target="_blank">Make a Bid</a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-10  thumb" data-cat="electronics">
+            <div class="thumbnail">
+                <img class="img-responsive grow " src="~/images/led.jpg" alt="pic">
+                <p class="caption">32" LG LED price PKR 25000  </p>
+                <a href="#" target="_blank">Make a Bid</a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-10  thumb" data-cat="photo">
+            <div class="thumbnail">
+                <img class="img-responsive grow " src="~/images/cat.jpg" alt="pic">
+                <p class="caption">Painter Ravi Verma , price PKR 25000</p>
+                <a href="#" target="_blank">Make a Bid</a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-10  thumb" data-cat="photo">
+            <div class="thumbnail">
+                <img class="img-responsive grow " src="~/images/corel-painter-fine-art.jpg" alt="pic">
+                <p class="caption">Painter Gimi Engg price PKR 40,000</p>
+                <a href="#" target="_blank">Make a Bid</a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-10 thumb" data-cat="photo">
+            <div class="thumbnail">
+                <img class="img-responsive grow " src="~/images/surreal-optical-illusion-paintings-by-rob-gonsalves-9.jpg" alt="pic">
+                <p class="caption">Painter Gimi Engg , price PKR 25000 </p>
+                <a href="#" target="_blank">Make a Bid</a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-10 thumb" data-cat="other">
+            <div class="thumbnail">
+                <img class="img-responsive grow " src="~/images/motorcycle_engine.jpg" alt="pic">
+                <p class="caption">Yamaha Motorbike engin , 100cc ,starting price PKR7,800</p>
+                <a href="#" target="_blank">Make a Bid</a>
+            </div>
+        </div>
+    </div>
+</div>*@

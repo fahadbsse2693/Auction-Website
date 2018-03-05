@@ -1,0 +1,189 @@
+body{
+    background-color: lavender;
+}
+
+.clear{
+    clear: both;
+}
+/* Navigation bar*/
+.navbar{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+.navbar-brand{
+    margin: 10px;
+    padding:2px;
+}
+.navbar-brand img{
+    width: 7em;
+    margin-left: 7px;
+    height: 2.78em;
+}
+#Menu-List{
+    margin-top: 1.5em;
+    list-style:none;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+#Menu-List li{
+    padding: 0.3em 0.5em;
+    margin-right: 0.8em;
+}#Menu-List a{
+    color: black;
+    padding: 0.5em 1.2em;
+    cursor: pointer;
+}
+#Menu-List a:hover {
+    background-color: lightgray;
+    transition: 0.2s linear;
+    text-decoration: none;
+    border-radius: 5px;
+    color: darkslategrey;
+}
+#Menu-List li .active{
+    background-color: lightgray;
+    border-radius: 5px;
+    color: whitesmoke;
+}
+/***********************************/
+/**********Wrap Cover***********/
+.wrap-cover
+{
+    margin-top: 1vh;
+    width: 100%;
+    background: url('../images/Slider/auction%20bg6.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 380px;
+    margin-bottom: 1vh;
+}
+
+/*-----------Catagory-------------*/
+/***********************************/
+#filters{margin-top:20px;}
+img:hover
+{
+     filter: alpha(opacity=50); /* For IE8 and earlier */
+     -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+     -o-transition: all 0.5s ease-in-out;
+     transition: all 0.5s ease-in-out;
+    transform: scale(1.05);
+}
+#filters
+{
+    color: #999999;
+    margin: 0% 0 2%;
+    list-style: none;
+    text-align: center;
+}
+#filters .active
+{
+    font-weight: bold;
+    color: black;
+    background-color:grey;
+}
+#filters li
+{
+    display: inline-block;
+    margin: 0 10px;
+}
+#filters li:first-child
+{
+    margin: 0px;
+}
+#filters li span:hover{
+    background-color: lightgray;
+    color: black;
+    font-size: bold;
+    transition: 0.5s linear;
+}
+#filters li span
+{
+    display: block;
+    padding: 6px 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #888;
+    cursor: pointer;
+    text-transform: capitalize;
+    
+}
+
+/***********************************/
+/***************Portfolios**********/
+.portfolio-list{
+    margin-top: 0.7em; 
+}
+.thumbnail >img{
+    width: 100%;
+    height: 200px;
+    cursor: pointer;
+}
+
+.thumbnail{
+    background: transparent;
+    overflow: hidden;
+}
+.thumbnail > a{
+    font-weight: 100;
+    font-size: 1em;
+    color : blue;
+    text-align: center;
+    text-decoration: underline;
+}
+.thumbnail > a:hover{
+    font-weight: bold;
+    transition: all 0.2s linear;
+    text-decoration: none;
+}
+a.thumbnail:hover, a.thumbnail:focus, a.thumbnail:active{border:none;}
+/***************Portfolios ends**********/
+/*Footer*/
+footer{
+    width: 100%;
+    margin-top: 5px;
+    height: auto;
+    background-color: white;   
+}
+footer ul{
+    margin-top: 1.2em;
+    list-style: none;
+    font-weight: bold;
+    font-size: 1em;
+}
+footer li{
+    padding: 0.5em 0.5em;
+    float: left;
+}
+.vendors{
+    padding-top: 2em;
+    color:darkslategrey;
+    text-align: center; 
+    background-color: white;
+}
+.vendors img{
+    width: 7em;
+    height: 4em; 
+} 
+footer #Social_Services img{
+    border: 1px solid grey;
+    padding: 0.5em 01em;
+    border-radius: 5px;
+}
+footer #Social_Services img:hover{
+    background-color: lightblue;
+}
+
+footer a{
+    text-decoration: none;
+    cursor: pointer;
+}
+footer a:hover{
+    transition: 0.2s linear;
+    text-decoration: none;
+    border-radius: 10px;
+    color: lightblue; 
+}
+/*Footer*/
